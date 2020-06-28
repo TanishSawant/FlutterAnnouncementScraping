@@ -76,7 +76,8 @@ class _MianScreenState extends State<MianScreen> {
         jsonResponse = convert.jsonDecode(response.body);
         _itemCount = jsonResponse.length;
       });
-
+//      jsonResponse[0]["author"]; = author name
+//      jsonResponse[0]["quote"]; = links text
       print(jsonResponse.toString());
       print("Number of links found : $_itemCount.");
       print("-------------------------------------------------------------------------");
@@ -151,7 +152,7 @@ class _MianScreenState extends State<MianScreen> {
                               ),
                             );
                           },
-                          itemCount: _itemCount+1,
+                          itemCount: jsonResponse['Advt-Recruitement'].length,
                         ),
                 ),
               ),
@@ -208,7 +209,7 @@ class _MianScreenState extends State<MianScreen> {
                               ),
                             );
                           },
-                          itemCount: _itemCount+1,
+                          itemCount: jsonResponse['COVID-19'].length,
                         ),
                 ),
               ),
@@ -265,7 +266,7 @@ class _MianScreenState extends State<MianScreen> {
                               ),
                             );
                           },
-                          itemCount: _itemCount+1,
+                          itemCount: jsonResponse['DIPLOMA'].length,
                         ),
                 ),
               ),
@@ -322,7 +323,7 @@ class _MianScreenState extends State<MianScreen> {
                               ),
                             );
                           },
-                          itemCount: _itemCount+1,
+                          itemCount: jsonResponse['DEGREE'].length,
                         ),
                 ),
               ),
@@ -378,7 +379,7 @@ ListTile(title: Text("EXAM_SECTION", style: TextStyle(fontSize: 24.0),),
                               ),
                             );
                           },
-                          itemCount: _itemCount+1,
+                          itemCount: jsonResponse['Exam_Section'].length,
                         ),
                 ),
               ),
@@ -435,7 +436,7 @@ ListTile(title: Text("EXAM_SECTION", style: TextStyle(fontSize: 24.0),),
                               ),
                             );
                           },
-                          itemCount: _itemCount+1,
+                          itemCount: jsonResponse['Notice'].length,
                         ),
                 ),
               ),
@@ -492,7 +493,7 @@ ListTile(title: Text("EXAM_SECTION", style: TextStyle(fontSize: 24.0),),
                               ),
                             );
                           },
-                          itemCount: _itemCount+1,
+                          itemCount: jsonResponse['VJTI_Tenders'].length,
                         ),
                 ),
               ),
@@ -549,7 +550,7 @@ ListTile(title: Text("EXAM_SECTION", style: TextStyle(fontSize: 24.0),),
                               ),
                             );
                           },
-                          itemCount: _itemCount+1,
+                          //itemCount: jsonResponse['WORKSHOP'].length,
                         ),
                 ),
               ),
@@ -606,7 +607,7 @@ ListTile(title: Text("EXAM_SECTION", style: TextStyle(fontSize: 24.0),),
                               ),
                             );
                           },
-                          itemCount: _itemCount+1,
+                          itemCount: jsonResponse['component'].length,
                         ),
                 ),
               ),
@@ -663,7 +664,7 @@ ListTile(title: Text("EXAM_SECTION", style: TextStyle(fontSize: 24.0),),
                               ),
                             );
                           },
-                          itemCount: _itemCount+1,
+                          itemCount: jsonResponse['notices'].length,
                         ),
                 ),
               ),
@@ -720,7 +721,7 @@ ListTile(title: Text("EXAM_SECTION", style: TextStyle(fontSize: 24.0),),
                               ),
                             );
                           },
-                          itemCount: _itemCount+1,
+                          itemCount: jsonResponse['mooc'].length,
                         ),
                 ),
               ),
